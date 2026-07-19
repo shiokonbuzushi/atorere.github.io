@@ -1,0 +1,147 @@
+h1 {
+    color: #777777;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-image: url(images/.png);
+    height: 320px;
+    padding-top: 40px;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+#global-nav {
+    position: fixed;
+    /* 固定表示 */
+    top: 0;
+    /* 上部に配置 */
+    left: 0;
+    width: 100%;
+    /* 幅を100%に設定 */
+    background-color: rgba(30, 215, 96, 0.5);
+    backdrop-filter: blur(10px);
+    /* 背景色 */
+    z-index: 9999;
+    /* 他の要素より前面に表示 */
+}
+
+#global-nav {
+    box-shadow: 0 5px 12px rgba(8, 8, 8, 0.2);
+    /*影はここ*/
+}
+
+#global-nav .inner {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    /* 上下のパディングを調整 */
+}
+
+.global-list {
+    display: flex;
+    justify-content: center;
+    /* 中央揃え */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.global-list li {
+    margin-right: 40px;
+}
+
+.global-list a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.global-list a:hover {
+    box-shadow: 0 5px 12px rgba(8, 8, 8, 0.2);
+    color: #00eeff;
+    border-radius: 16px;
+    transform: scale(1.8);
+    transition: 0.3s;
+}
+/*ここから簡易電たく*/
+.madashi {
+    color: #ffffff;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 0 5px 12px rgba(8, 8, 8, 0.2);
+}
+
+.mi {
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+}
+
+.mi2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*電卓本体*/
+.dentaku{
+    align: Center;
+}
+table{
+width: 500px;
+height: 400px;
+border: solid 1px　#dcdcdca4;
+border-right: solid 4px #dcdcdca4;
+    border-bottom: solid 4px #dcdcdca4;
+    border-radius: 10px;
+    /* インライン要素を中央に配置 */
+    text-align: center;
+    /* 余白調整 */
+    padding: 8px;
+    margin: 20px;
+}
+input{
+    width: 90px;
+    height: 90px;
+    font-size: 20px;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+.display {
+width: 300px;
+text-align: right;
+background: #ffffff;
+
+    border-top: solid #dcdcdca4 5px;
+    border-bottom: solid #dcdcdca4 5px;
+    border-right: solid #dcdcdca4 6px;
+    border-left: solid #b6b6b6 6px;
+    border-radius: 5px;
+}
+.operator {
+    background-color: #87cefa;
+}
+.equal {
+    background-color: #6b6b6b;
+}
+input:hover {
+    background: #1adc7bb9;
+        box-shadow: 0 5px 12px rgba(8, 8, 8, 0.2);
+}
+.display:hover {
+    background: #ffffff;
+    /*ディスプレイ部分は無効化*/
+}
+
+.operator:hover {
+    background: #339cdd;
+}
+input:active {
+    background: #5a5a5a;
+}
+
+.operator:active {
+    background: #2c80b4;
+}
