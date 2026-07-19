@@ -249,7 +249,7 @@ filter: drop-shadow(0 0 4px #0e7dff);
 /* 画面幅が600px以下の場合のスタイル */
 @media screen and (max-width: 800px) {
     .container {
-        padding: 5px;
+        padding: 10px;
     }
 }
 
@@ -270,49 +270,6 @@ preview {
     border: 1px solid;
     overflow: hidden;
 }
-
-nav {
-    background-color: rgba(30, 215, 96, 0.5);
-    padding-top: 10px;
-    padding-bottom: 10px font-family; }"Noto Sans JP", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-nav ul {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: center;
-font-family: "hiragino-kaku-gothic-pron", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 40px;
-font-family: "hiragino-kaku-gothic-pron", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    ;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-font-family: "hiragino-kaku-gothic-pron", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-
-}
-
-nav a:hover {
-    color: #ffcc11;
-}
-
-    
-
 #global-nav {
     position: fixed;
     /* 固定表示 */
@@ -327,7 +284,7 @@ nav a:hover {
     z-index: 9999;
     /* 他の要素より前面に表示 */
 }
-
+@media and (max-width: 960px) {
 #global-nav {
     box-shadow: 0 5px 12px rgba(8, 8, 8, 0.2);
     /*影はここ*/
@@ -339,10 +296,11 @@ nav a:hover {
     margin: 0 auto;
     padding: 10px 0;
     /* 上下のパディングを調整 */
-   
+
 }
-@media and (max-width: 480px) {
-#global-nav {
+
+
+    #global-nav {
         position: fixed;
         /* 固定表示 */
         top: 0;
@@ -370,6 +328,7 @@ nav a:hover {
         /* 上下のパディングを調整 */
     }
 }
+
 .global-list {
     display: flex;
     justify-content: center;
@@ -379,21 +338,26 @@ nav a:hover {
     padding: 0;
 }
 
- 
+
 .global-list li {
     margin-right: 40px;
 }
-.global-list li :hover{
+
+.global-list li :hover {
     margin-right: 5px;
     margin-left: 5px;
-  
+
 }
+
 .global-list a {
     color: #ffffff;
     text-decoration: none;
-transform: scale(1.0);
+    transform: scale(1.0);
     transition: 0.3s;
-    
+font-family: "hiragino-kaku-gothic-pron", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
 }
 
 .global-list a:hover {
@@ -402,13 +366,11 @@ transform: scale(1.0);
     width: 20%;
     border-radius: 16px;
     transform: scale(1.8);
-        transition: 0.3s;
-        border: #00eeff solid 2px;
-        
+    transition: 0.3s;
+    border: #00eeff solid 2px;
+
 }
-
-
-
+}
 
 .botan {
     position: absolute;
@@ -800,3 +762,122 @@ font-family: "hiragino-kaku-gothic-pron", sans-serif;
     bottom: 0;
     margin-bottom 0px;
 }
+
+/* ===== atoreresitemobe.css merged / clean mobile tuning =====
+   スマホ用CSSをこの atoreresite.css に統合済み。
+   480px以下でも見た目が極端に崩れないよう、サイズ・余白を整理しています。
+*/
+@media screen and (max-width: 480px) {
+    h1 {
+        color: #777777;
+        height: auto;
+        min-height: 180px;
+        padding-top: 32px;
+        font-family: "Noto Sans JP", "hiragino-kaku-gothic-pron", sans-serif;
+        font-size: clamp(28px, 9vw, 42px);
+        line-height: 1.3;
+    }
+
+    header {
+        min-height: 58vh;
+        height: auto;
+        padding: 90px 16px 48px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hedj {
+        font-size: clamp(28px, 9vw, 46px);
+        line-height: 1.25;
+    }
+
+    .body {
+        margin: 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    .sns,
+    .midashi {
+        margin-top: 32px;
+        padding: 14px;
+        border-width: 6px;
+        border-top-width: 6px;
+        border-radius: 18px;
+        font-size: clamp(17px, 4.8vw, 23px);
+    }
+
+    .snsz {
+        width: 100%;
+        height: auto;
+        margin-top: 22px;
+        padding: 14px;
+        border-radius: 18px;
+        display: block;
+        position: relative;
+    }
+
+    .snsz img,
+    .snsz img.youtube-icon {
+        position: static;
+        display: block;
+        width: 100%;
+        max-width: 230px;
+        height: auto;
+        margin: 0 auto 12px;
+        border-radius: 16px;
+    }
+
+    .snsz h3 {
+        font-size: clamp(22px, 6.5vw, 30px);
+        line-height: 1.35;
+        margin: 8px 0;
+    }
+
+    .snsz h4 {
+        font-size: clamp(18px, 5.2vw, 24px);
+        line-height: 1.4;
+        margin: 8px 0;
+    }
+
+    .snsz p,
+    .snsname,
+    .snsato,
+    .snsb,
+    .r7,
+    .NotFound {
+        font-size: clamp(15px, 4vw, 18px);
+        line-height: 1.75;
+    }
+
+    #youtube,
+    #twiter,
+    #twitter,
+    #bsky,
+    #instagram,
+    #atorere,
+    #site {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 14px 0;
+        display: block;
+        padding: 12px;
+        border-radius: 18px;
+    }
+
+    #line {
+        margin-top: 16px;
+    }
+
+    preview {
+        width: 100%;
+        max-width: 330px;
+        height: auto;
+    }
+}
+/* ===== end merged mobile styles ===== */
